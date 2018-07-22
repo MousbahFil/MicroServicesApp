@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>	
+
+	<groupId>com.mousbah</groupId>
+	<artifactId>microservicesApp</artifactId>
+	<version>1.0</version>
+	<packaging>pom</packaging>
+	<name>MicroservicesApp</name>
+
+	<modules>
+		<module>currency-conversion-service</module>
+		<module>currency-exchange-service</module>				
+		<module>limits-service</module>
+		<module>netflix-eureka-naming-server</module>
+		<module>netflix-zuul-api-gateway-server</module>
+		<module>spring-cloud-config-server</module>
+		
+	</modules>
+</project>

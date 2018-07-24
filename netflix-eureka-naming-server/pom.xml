@@ -99,7 +99,7 @@
 							</build>
 						</image>
 					</images>
-					<certPath>C:\Users\melfil\.docker\machine\machines\default</certPath>
+					<!--<certPath>C:\Users\melfil\.docker\machine\machines\default</certPath>-->
 				</configuration>
 			</plugin>
 			<plugin>

@@ -195,8 +195,6 @@
 							<name>${docker.image.prefix}/${docker.image.name}</name>
 							<build>
 								<dockerFileDir>${project.basedir}/target/dockerfile/</dockerFileDir>
-
-								
 								<assembly>
 									<descriptorRef>artifact</descriptorRef>
 								</assembly>

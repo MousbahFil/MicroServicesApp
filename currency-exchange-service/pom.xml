@@ -186,5 +186,48 @@
 		</pluginRepository>
 	</pluginRepositories>
 
+	<profiles>
+		<profile>
+			<id>docker</id>
+			<activation>
+				<os>
+					<family>Linux</family>
+				</os>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>io.fabric8</groupId>
+						<artifactId>docker-maven-plugin</artifactId>
+						<version>0.20.0</version>
+
+						<configuration>
+							<dockerHost>tcp://192.168.99.100:2376</dockerHost>
+							<verbose>true</verbose>
+							<images>
+								<image>
+									<name>${docker.image.prefix}/${docker.image.name}</name>
+									<build>
+										<dockerFileDir>${project.basedir}/target/dockerfile/</dockerFileDir>
+										<assembly>
+											<descriptorRef>artifact</descriptorRef>
+										</assembly>
+										<tags>
+											<tag>latest</tag>
+											<tag>${project.version}</tag>
+										</tags>
+									</build>
+								</image>
+							</images>
+							<certPath>/var/jenkins_home/docker-certs</certPath>
+
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
+	</profiles>
+
 
 </project>

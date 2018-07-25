@@ -103,7 +103,7 @@
 					<!--<certPath>C:\Users\melfil\.docker\machine\machines\default</certPath>-->
 					<certPath>/var/jenkins_home/docker-certs</certPath>
 					
-				</configuration>
+				</configuration>  
 			</plugin>
 			  <plugin>
 					<groupId>com.spotify</groupId>

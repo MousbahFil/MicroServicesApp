@@ -80,6 +80,15 @@
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>0.20.0</version>
 
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>build</goal>
+						</goals>
+					</execution>
+				</executions>
+
 				<configuration>
 					<dockerHost>tcp://192.168.99.100:2376</dockerHost>
 					<verbose>true</verbose>
@@ -87,9 +96,7 @@
 						<image>
 							<name>${docker.image.prefix}/${docker.image.name}</name>
 							<build>
-								<dockerFileDir>${project.basedir}/target/dockerfile/</dockerFileDir>
-
-								
+								<!--<dockerFileDir>${project.basedir}</dockerFileDir>-->
 								<assembly>
 									<descriptorRef>artifact</descriptorRef>
 								</assembly>
@@ -102,7 +109,8 @@
 					</images>
 					<certPath>C:\Users\melfil\.docker\machine\machines\default</certPath>										
 				</configuration>  
-			</plugin>			 
+			</plugin>
+			<!--
 			<plugin>
 				<groupId>org.codehaus.gmavenplus</groupId>
 				<artifactId>gmavenplus-plugin</artifactId>
@@ -125,12 +133,11 @@
 					<dependency>
 						<groupId>org.codehaus.groovy</groupId>
 						<artifactId>groovy-all</artifactId>
-						<!-- any version of Groovy \>= 1.5.0 should work here -->
 						<version>2.4.8</version>
 						<scope>runtime</scope>
 					</dependency>
 				</dependencies>
-			</plugin>
+			</plugin>-->
 		</plugins>
 	</build>
 
@@ -187,6 +194,15 @@
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>0.20.0</version>
 
+						<executions>
+							<execution>
+								<phase>package</phase>
+								<goals>
+									<goal>build</goal>
+								</goals>
+							</execution>
+						</executions>
+
 				<configuration>
 					<dockerHost>tcp://192.168.99.100:2376</dockerHost>
 					<verbose>true</verbose>
@@ -194,7 +210,7 @@
 						<image>
 							<name>${docker.image.prefix}/${docker.image.name}</name>
 							<build>
-								<dockerFileDir>${project.basedir}/target/dockerfile/</dockerFileDir>
+								<!--<dockerFileDir>${project.basedir}</dockerFileDir>-->
 								<assembly>
 									<descriptorRef>artifact</descriptorRef>
 								</assembly>

@@ -1,6 +1,6 @@
 FROM openjdk
 
-EXPOSE 8765
+EXPOSE 8761
 
 VOLUME /tmp
 ADD target/netflix-eureka-naming-server-0.0.1-SNAPSHOT.jar netflix-eureka-naming-server-0.0.1-SNAPSHOT.jar
